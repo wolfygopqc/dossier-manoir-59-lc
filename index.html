@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier reprise | Manoir Braithwaite</title>
+    <style>
+        /* CSS corrigé pour éviter les débordements et optimiser le style */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #CDB48D; /* Papier jauni */
+            color: #3D2D1E; /* Texte brun foncé */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-snap-type: y mandatory;
+        }
+
+        .page-container {
+            /* Simule une page par section */
+            min-height: 100vh; 
+            width: 100%;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            scroll-snap-align: start; 
+        }
+
+        .dossier-card {
+            max-width: 900px;
+            width: 85%;
+            box-sizing: border-box; /* Inclusion du padding et border dans la largeur/hauteur */
+            background-color: #F8F4E8;
+            padding: 40px 60px;
+            margin: 20px auto;
+            border: 5px solid #6D4C41; 
+            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2); /* Ombre ajustée */
+        }
+
+        /* Styles de titre */
+        header {
+            text-align: center;
+            border-bottom: 3px double #3D2D1E;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Arial Black', sans-serif;
+            color: #6D4C41;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 1px #A08C6A;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            color: #9C774C;
+            border-bottom: 2px solid #9C774C;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #3D2D1E;
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        /* Styles du contenu */
+        .placeholder {
+            /* Le style pour l'espace à remplir par l'utilisateur */
+            border: 2px dashed #B22222; 
+            padding: 15px;
+            margin: 15px 0;
+            background-color: #FDFCEF;
+            text-align: left; /* Texte aligné à gauche pour le contenu */
+            font-style: italic;
+            color: #3D2D1E;
+        }
+        
+        /* Les spans (petits champs) dans la page d'intro */
+        .placeholder.inline {
+             display: inline-block;
+             width: auto;
+             padding: 5px 10px;
+             margin: 0 5px;
+             text-align: center;
+        }
+
+        /* STYLE POUR L'IMAGE DE LA CARTE */
+        .map-container {
+            margin: 20px 0;
+            padding: 10px;
+            border: 3px double #4A3A2F; /* Cadre plus officiel */
+            background-color: #FDFCEF;
+            text-align: center;
+        }
+        
+        .map-container img {
+            width: 100%; /* L'image prend la largeur du conteneur */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .devise {
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .rp-highlight {
+            font-weight: bold;
+            color: #B22222; 
+        }
+
+        .list-style {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .list-style li {
+            padding-left: 1.5em;
+            position: relative;
+        }
+        
+        .list-style li:before {
+            content: "\272A"; 
+            color: #9C774C;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        /* Page de garde spécifique */
+        #page-intro .dossier-card {
+             height: 80vh; 
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             text-align: center;
+        }
+        
+        /* Footer pour la dernière page */
+        #page-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #6D4C41;
+            font-size: 0.8em;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-container" id="page-intro">
+        <div class="dossier-card">
+            <header>
+                <p>FAMILLE GRAVES | SHERIFF DE NEW AUSTIN</p>
+                <h1>DOSSIER DE REPRISE BIEN IMMOBILIER</h1>
+                <h2>MANOIR BRAITHWAITE</h2>
+            
+            <p style="font-size: 1.1em; margin-top: 50px;">
+                Dossier de reprise d'un bien immobilier située sur le comté de <span class="rp-highlight">Lemoyne</span> nommée le / la <span class="rp-highlight">Manoir Braithwaite</span>.
+            </p>
+
+            <div style="margin-top: 50px; text-align: center;">
+                <p>Rédacteur : <span class="placeholder inline">[ Famille Graves ]</span></p>
+                <p>Date d'émission : <span class="placeholder inline">[ 1901-10-19 ]</span></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="dossier-card">
+            <h2>1. OBJECTIFS DE LA REPRISE DU MANOIR BRAITHWAITE</h2>
+            
+            <h3>Objectifs commun de la reprise</h3>
+            <ul class="list-style">
+                <li><span class="rp-highlight">Bûts du lieux :</span> Rendre le lieux résidentiel un endroit de calme ou il y a de nombreux évènements mais également une famille , la famille Graves et des amis y habitant .</li>
+                <li><span class="rp-highlight">Évènementiels :</span> Le terrain , son positionnement proche de deux villes ainsi que a un cours d'eau et un facteur positif permettant des possibilités d'évènement en plus .</li>
+                <li><span class="rp-highlight">Réunion :</span> Il peut en devenir également un lieu de réunion citoyenne / policiers ou même de famille au vue de la salle avec ses nombreuses chaises.</li>
+            </ul>
+
+            <p><strong>Positionnement du manoir (Carte) :</strong></p>
+            <div class="map-container">
+                <img src="https://cdn.discordapp.com/attachments/1427263903993434155/1429549023131471993/AAHar4e7qhH-OZ1wHl07HhuzjCtz1Aayou9n7WeDJlSyaxgmRKwzvZ3JW5xpAhhuc0Dv-G634RlriqoNYBN22jKCLiktjeFLpk9PDZe47NG1zqIvrevmri0MC4DiZSsH0YOkBiXk1eaj2K7DQDR4ywI5ABvOq6lEBB8NeLC3_V9GXj8_NXeOhO-nvZQAzJSfdTtRe_FrMm4FBljqKVcdreYoJt1Evxj0VD0935X_sTRVAAlYWoWTDI4L6WnDYLBo_6HHAmZGSZz_2aSSleaI1zR5DKkL8bS0GxDXjBgd.png?ex=68f68ac6&is=68f53946&hm=574adeaf89db42def5d4c56a735d55feb09fe44cd007177d0b028c97db85a8d1&" alt="Carte Justificative de l'Intervention">
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="dossier-card">
+            <h2>2. OPPORTUNITÉS LIÉES À L'ACQUISITION DU LIEU</h2>
+            <p>Le lieux de par son terrain , le cours d'eau proche offre des possibilités de scène & de sortie .</p>
+
+            <h3>Opportunités Roleplay</h3>
+            <ul class="list-style">
+                <li><span class="rp-highlight">Scène Roleplay :</span> Possibilités de scène légal ou même illégal ( Mariages , Prise d'otage , Funérailles , Réunion de famille , etc).</li>
+                <li><span class="rp-highlight">Vache qui rigole :</span> Vache qui rigole.</li>
+                <li><span class="rp-highlight">Vache qui rigole :</span> Vache qui rigole.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="dossier-card">
+            <h2>3. CALENDRIER ET ACTIONS ÉVÉNEMENTIELLES PUBLIQUES</h2>
+            <p>Vache qui rigole.</p>
+
+            <h3>Événement 1 : Vache qui rigole</h3>
+            <div class="placeholder">
+                [ Vache qui rigole ]
+            </div>
+            
+            <h3>Événement 2 : Vache qui rigole</h3>
+            <div class="placeholder">
+                [ Vache qui rigole ]
+            </div>
+            
+            <h3>Événement 3 : Vache qui rigole</h3>
+            <div class="placeholder">
+                [ Vache qui rigole ]
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="dossier-card">
+            <h2>4. IMPACT DE LA RÉPUTATION DES SHERIFF ET DE LA FAMILLE</h2>
+
+            <h3>Une réputation capable de créer des scènes de Roleplay</h3>
+            <ul class="list-style">
+                <li><span class="rp-highlight">Famille Graves réputation :</span> La famille Graves a déjà établi une réputation formelle sur le comté de New Austin et leur nom circule plutôt pas mal sur les autres comtés. Une réputation qui montre la peur & la haine de certains groupes.</li>
+                <li><span class="rp-highlight">Sheriff de New Austin réputation :</span> Les sheriff de New Austin étant principalement constitué de Graves ont u la chance également de faire circulés leur nom et leur réputation face au groupe & au citoyens incluant celle précisé ci dessus ( <span class="rp-highlight">Réputation Famille Graves </span> ) .</li>
+            </ul>
+            
+            <div id="page-footer">
+                Document de reprise du <span class="rp-highlight">Manoir Braithwaite</span> | <span class="rp-highlight">Famille Graves</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
